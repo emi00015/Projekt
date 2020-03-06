@@ -1,0 +1,26 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int tab[10];
+
+int main()
+{
+    ifstream in;
+    in.open("dane.txt");
+    ofstream out;
+    out.open("liczby.txt");
+    int a;
+    while (in >> a)
+    {
+        tab[a-1] +=1;
+    }
+    for(int i=1; i<=10; i++)
+    {
+        out << i << ":" << " " << tab[i-1] << endl;
+    }
+    in.close();
+    out.close();
+
+}
