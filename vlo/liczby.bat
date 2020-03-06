@@ -1,0 +1,1 @@
+program2.exe < dane.txt > liczby.txt
